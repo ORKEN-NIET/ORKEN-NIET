@@ -1,4 +1,4 @@
-package com.example.experience.Fragments;
+package kz.orkenniet.admin.presentation;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,18 +7,19 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.experience.R;
+import kz.orkenniet.R;
 
-public class HomeFragment extends Fragment {
+public class AdminProfilFragment extends Fragment {
 
-    public HomeFragment() {
+    public AdminProfilFragment() {
         // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.admin_fragment_profil, container, false);
         return view;
     }
 }

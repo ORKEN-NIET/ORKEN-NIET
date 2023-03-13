@@ -1,4 +1,4 @@
-package com.example.experience.Fragments;
+package kz.orkenniet.profile.presentation;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,11 +7,11 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.experience.R;
+import kz.orkenniet.R;
 
-public class F_WantFragment extends Fragment {
+public class ProfilFragment extends Fragment {
 
-    public F_WantFragment() {
+    public ProfilFragment() {
         // Required empty public constructor
     }
 
@@ -19,7 +19,7 @@ public class F_WantFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.f_fragment_want, container, false);
+        View view = inflater.inflate(R.layout.fragment_profil, container, false);
         return view;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.experience;
+package kz.orkenniet.tabbar.presentation;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,10 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.experience.Fragments.BibliotekaFragment;
-import com.example.experience.Fragments.CitatyFragment;
-import com.example.experience.Fragments.HomeFragment;
-import com.example.experience.Fragments.ProfilFragment;
+import kz.orkenniet.R;
+import kz.orkenniet.library.presentation.BibliotekaFragment;
+import kz.orkenniet.quotes.presentation.CitatyFragment;
+import kz.orkenniet.home.presentation.HomeFragment;
+import kz.orkenniet.profile.presentation.ProfilFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

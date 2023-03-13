@@ -1,4 +1,4 @@
-package com.example.experience.SplashScreen;
+package kz.orkenniet.splash;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
@@ -12,10 +12,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.experience.R;
-import com.example.experience.SplashScreen.FourthPage;
+import kz.orkenniet.R;
 
-public class ThirdPage extends AppCompatActivity {
+public class FirstPage extends AppCompatActivity {
     String prevStarted = "yes";
     ViewPager slidePager;
     PagerAdapter adapter;
@@ -40,7 +39,7 @@ public class ThirdPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third_page);
+        setContentView(R.layout.activity_first_page);
         img_next = findViewById(R.id.img_next);
         img_next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +49,7 @@ public class ThirdPage extends AppCompatActivity {
         });
     }
     public void moveToSecondary(){
-        Intent intent = new Intent(this, FourthPage.class);
+        Intent intent = new Intent(this, SecondPage.class);
         startActivity(intent);
     }
 }

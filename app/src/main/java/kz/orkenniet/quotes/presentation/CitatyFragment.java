@@ -1,4 +1,4 @@
-package com.example.experience.Fragments;
+package kz.orkenniet.quotes.presentation;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,11 +7,11 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.experience.R;
+import kz.orkenniet.R;
 
-public class ProfilFragment extends Fragment {
+public class CitatyFragment extends Fragment {
 
-    public ProfilFragment() {
+    public CitatyFragment() {
         // Required empty public constructor
     }
 
@@ -19,7 +19,7 @@ public class ProfilFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_profil, container, false);
+        View view = inflater.inflate(R.layout.fragment_citaty, container, false);
         return view;
     }
 }
