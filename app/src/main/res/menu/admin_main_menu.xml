@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/glavnaya"
+        android:icon="@drawable/home"
+        android:title="@string/basty_bet" />
+    <item
+        android:id="@+id/biblioteka"
+        android:icon="@drawable/book"
+        android:title="@string/kitaphana" />
+    <item
+        android:id="@+id/citaty"
+        android:icon="@drawable/list"
+        android:title="@string/citatalar" />
+    <item
+        android:id="@+id/profil"
+        android:icon="@drawable/profil"
+        android:title="@string/paraqsha" />
+</menu>

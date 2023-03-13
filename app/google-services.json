@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "359368483724",
+    "project_id": "orken-niet",
+    "storage_bucket": "orken-niet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359368483724:android:b3a3afdee4e7d9d038aca9",
+        "android_client_info": {
+          "package_name": "com.example.experience"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359368483724-ms1op3ogi84haid85uvo18b5mv46onff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzl5ivYFhMMUtUVJA3Rqy3jcqTK5UKALY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359368483724-ms1op3ogi84haid85uvo18b5mv46onff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Experience</string>
+    <string name="first_page_word1">Целая библиотека в твоем телефоне!</string>
+    <string name="first_page_word2">Тренируй привычку читать</string>
+    <string name="first_page_word3">Будь первым среди всех</string>
+    <string name="first_page_word4">Начать</string>
+    <string name="barlygy">Барлығы</string>
+    <string name="ganrlar">Жанрлар</string>
+    <string name="oqyluda">Оқылуда</string>
+    <string name="qalaimyn">Қалаймын</string>
+    <string name="oqylgan">Оқылған</string>
+    <string name="tanymal">Танымал</string>
+    <string name="jana">Жаңа</string>
+    <string name="basty_bet">Басты бет</string>
+    <string name="kitaphana">Кітапхана</string>
+    <string name="citatalar">Цитаталар</string>
+    <string name="paraqsha">Парақша</string>
+    <string name="baptaular">Баптаулар</string>
+    <string name="komek">Көмек</string>
+    <string name="qalgan_kun">Қалған күн</string>
+    <string name="normativti_bet_sany">Нормативті бет саны</string>
+    <string name="electronodyq_pochts">Электрондық почта</string>
+    <string name="qupiasoz">Құпиясөз</string>
+</resources>
