@@ -29,14 +29,14 @@
            android:text="akesinin"
            android:textColor="@color/black"/>
        <EditText
-           android:id="@+id/edt_email"
+           android:id="@+id/editTextEmail"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:textSize="15dp"
            android:text="email"
            android:textColor="@color/black"/>
        <EditText
-           android:id="@+id/edt_password"
+           android:id="@+id/editTextPassword"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:textSize="15dp"
