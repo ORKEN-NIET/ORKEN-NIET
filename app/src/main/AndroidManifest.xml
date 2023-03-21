@@ -16,7 +16,7 @@
             android:name=".admin.presentation.AdminMainActivity"
             android:exported="false" />
         <activity
-            android:name=".login.presentation.LoginActivity"
+            android:name=".auth.presentation.AuthActivity"
             android:exported="false" />
         <activity
             android:name=".splash.FourthPage"

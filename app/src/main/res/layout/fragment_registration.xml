@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="16dp">
+
+    <EditText
+        android:id="@+id/emailEditText"
+        style="@style/EditTextStyle"
+        android:layout_marginHorizontal="16dp"
+        android:hint="@string/electronodyq_pochts"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        style="@style/EditTextStyle"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/qupiasoz"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/repeatPasswordEditText"
+        style="@style/EditTextStyle"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/qupiasoz"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/hasAccountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="6dp"
+        android:text="Has account?" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/regitrationButton"
+        style="@style/PrimaryButtonStyle"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Registration" />
+
+</LinearLayout>
