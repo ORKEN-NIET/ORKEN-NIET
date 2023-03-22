@@ -7,6 +7,6 @@ interface AuthRepository {
 
     suspend fun login(email: String, password: String): Resource<AuthResult>
 
-    suspend fun register(email: String, password: String, repeatPassword: String)
+    suspend fun register(email: String, password: String): Resource<AuthResult>
 
 }

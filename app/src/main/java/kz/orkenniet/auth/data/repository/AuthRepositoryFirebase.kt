@@ -22,6 +22,12 @@ class AuthRepositoryFirebase(
         }
     }
 
-    override suspend fun register(email: String, password: String, repeatPassword: String) {
+    override suspend fun register(email: String, password: String): Resource<AuthResult> {
+        return withContext(Dispatchers.IO) {
+            safeCall {
+                val result = firebaseAuth.createUserWithEmailAndPassword(email, password).await()
+                Resource.Success(result)
+            }
+        }
     }
 }
