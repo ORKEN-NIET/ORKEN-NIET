@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>FinalNewline:kz.orkenniet.auth.data.repository.AuthRepositoryFirebase.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.auth.domain.repository.AuthRepository.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.auth.domain.usecase.LoginUseCase.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.auth.domain.usecase.RegistrationUseCase.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.auth.presentation.AuthActivity.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.auth.presentation.AuthPagerAdapter.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.auth.presentation.login.LoginFragment.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.auth.presentation.login.LoginViewModel.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.auth.presentation.registration.RegistrationFragment.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.auth.presentation.registration.RegistrationViewModel.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.core.android.OrkenNietApplication.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.core.extentions.FlowExtention.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.core.extentions.FragmentExtention.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.core.resource.SafeCall.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.di.FirebaseModule.kt:1</ID>
+    <ID>FinalNewline:kz.orkenniet.di.LoginModule.kt:1</ID>
+    <ID>MultiLineIfElse:kz.orkenniet.auth.domain.usecase.RegistrationUseCase.kt:13</ID>
+    <ID>NewLineAtEndOfFile:AuthActivity.kt$kz.orkenniet.auth.presentation.AuthActivity.kt</ID>
+    <ID>NewLineAtEndOfFile:AuthPagerAdapter.kt$kz.orkenniet.auth.presentation.AuthPagerAdapter.kt</ID>
+    <ID>NewLineAtEndOfFile:AuthRepository.kt$kz.orkenniet.auth.domain.repository.AuthRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:AuthRepositoryFirebase.kt$kz.orkenniet.auth.data.repository.AuthRepositoryFirebase.kt</ID>
+    <ID>NewLineAtEndOfFile:FirebaseModule.kt$kz.orkenniet.di.FirebaseModule.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowExtention.kt$kz.orkenniet.core.extentions.FlowExtention.kt</ID>
+    <ID>NewLineAtEndOfFile:FragmentExtention.kt$kz.orkenniet.core.extentions.FragmentExtention.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginFragment.kt$kz.orkenniet.auth.presentation.login.LoginFragment.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginModule.kt$kz.orkenniet.di.LoginModule.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginUseCase.kt$kz.orkenniet.auth.domain.usecase.LoginUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginViewModel.kt$kz.orkenniet.auth.presentation.login.LoginViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:OrkenNietApplication.kt$kz.orkenniet.core.android.OrkenNietApplication.kt</ID>
+    <ID>NewLineAtEndOfFile:RegistrationFragment.kt$kz.orkenniet.auth.presentation.registration.RegistrationFragment.kt</ID>
+    <ID>NewLineAtEndOfFile:RegistrationUseCase.kt$kz.orkenniet.auth.domain.usecase.RegistrationUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:RegistrationViewModel.kt$kz.orkenniet.auth.presentation.registration.RegistrationViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:SafeCall.kt$kz.orkenniet.core.resource.SafeCall.kt</ID>
+    <ID>NoBlankLineBeforeRbrace:kz.orkenniet.auth.domain.repository.AuthRepository.kt:11</ID>
+    <ID>NoMultipleSpaces:kz.orkenniet.auth.domain.usecase.LoginUseCase.kt:12</ID>
+    <ID>NoUnusedImports:kz.orkenniet.auth.presentation.registration.RegistrationViewModel.kt:10</ID>
+    <ID>SpacingAroundCurly:kz.orkenniet.auth.presentation.AuthActivity.kt:21</ID>
+    <ID>TooGenericExceptionCaught:SafeCall.kt$e: Exception</ID>
+    <ID>UnusedPrivateMember:SafeCall.kt$action: (T) -&gt; Unit</ID>
+  </CurrentIssues>
+</SmellBaseline>
