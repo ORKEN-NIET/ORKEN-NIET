@@ -1,25 +1,18 @@
-package kz.orkenniet.quotes.presentation;
+package kz.orkenniet.quotes.presentation
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.Fragment
+import by.kirich1409.viewbindingdelegate.viewBinding
+import kz.orkenniet.R
+import kz.orkenniet.databinding.FragmentCitatyBinding
 
-import androidx.fragment.app.Fragment;
+class CitatyFragment : Fragment(R.layout.fragment_citaty) {
 
-import kz.orkenniet.R;
+    private val binding: FragmentCitatyBinding by viewBinding(FragmentCitatyBinding::bind)
 
-public class CitatyFragment extends Fragment {
-
-    public CitatyFragment() {
-        // Required empty public constructor
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_citaty, container, false);
-        return view;
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.root
     }
 }
