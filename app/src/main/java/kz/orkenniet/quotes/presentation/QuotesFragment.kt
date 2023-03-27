@@ -13,6 +13,10 @@ class QuotesFragment : Fragment(R.layout.fragment_quotes) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+<<<<<<< HEAD
         binding.root
+=======
+        binding.javaClass
+>>>>>>> 7d8efb7 (quotes fragment jasadym)
     }
 }
