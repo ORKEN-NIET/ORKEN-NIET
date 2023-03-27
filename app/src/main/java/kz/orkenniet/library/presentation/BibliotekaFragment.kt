@@ -11,7 +11,7 @@ import kz.orkenniet.databinding.FragmentBibliotekaBinding
 
 class BibliotekaFragment : Fragment(R.layout.fragment_biblioteka) {
 
-    private val binding:FragmentBibliotekaBinding by viewBinding(FragmentBibliotekaBinding::bind)
+    private val binding: FragmentBibliotekaBinding by viewBinding(FragmentBibliotekaBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
