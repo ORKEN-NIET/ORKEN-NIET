@@ -9,7 +9,7 @@ import android.view.MenuItem;
 
 import kz.orkenniet.R;
 import kz.orkenniet.library.presentation.BibliotekaFragment;
-import kz.orkenniet.quotes.presentation.CitatyFragment;
+import kz.orkenniet.quotes.presentation.QuotesFragment;
 import kz.orkenniet.home.presentation.HomeFragment;
 import kz.orkenniet.profile.presentation.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                                 selectedFragment = new BibliotekaFragment();
                                 break;
                             case R.id.citaty:
-                                selectedFragment = new CitatyFragment();
+                                selectedFragment = new QuotesFragment();
                                 break;
                             case R.id.profil:
                                 selectedFragment = new ProfileFragment();

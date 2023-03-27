@@ -5,11 +5,11 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
 import kz.orkenniet.R
-import kz.orkenniet.databinding.FragmentCitatyBinding
+import kz.orkenniet.databinding.FragmentQuotesBinding
 
-class CitatyFragment : Fragment(R.layout.fragment_citaty) {
+class QuotesFragment : Fragment(R.layout.fragment_quotes) {
 
-    private val binding: FragmentCitatyBinding by viewBinding(FragmentCitatyBinding::bind)
+    private val binding: FragmentQuotesBinding by viewBinding(FragmentQuotesBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
