@@ -1,4 +1,4 @@
-package kz.orkenniet.admin.presentation;
+package kz.orkenniet.core.presentation;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +12,7 @@ import kz.orkenniet.R;
 import kz.orkenniet.library.presentation.BibliotekaFragment;
 import kz.orkenniet.quotes.presentation.CitatyFragment;
 import kz.orkenniet.home.presentation.HomeFragment;
-import kz.orkenniet.profile.presentation.ProfilFragment;
+import kz.orkenniet.profile.presentation.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AdminMainActivity extends AppCompatActivity {
@@ -44,7 +44,7 @@ public class AdminMainActivity extends AppCompatActivity {
                             selectedFragment = new CitatyFragment();
                             break;
                         case R.id.profil:
-                            selectedFragment = new ProfilFragment();
+                            selectedFragment = new ProfileFragment();
                             break;
                     }
 

@@ -11,7 +11,7 @@ import kz.orkenniet.R;
 import kz.orkenniet.library.presentation.BibliotekaFragment;
 import kz.orkenniet.quotes.presentation.CitatyFragment;
 import kz.orkenniet.home.presentation.HomeFragment;
-import kz.orkenniet.profile.presentation.ProfilFragment;
+import kz.orkenniet.profile.presentation.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                                 selectedFragment = new CitatyFragment();
                                 break;
                             case R.id.profil:
-                                selectedFragment = new ProfilFragment();
+                                selectedFragment = new ProfileFragment();
                                 break;
                         }
 
