@@ -1,4 +1,4 @@
-package kz.orkenniet.core.presentation;
+package kz.orkenniet.admin.presentation;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
