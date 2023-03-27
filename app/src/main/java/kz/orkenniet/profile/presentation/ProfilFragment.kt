@@ -1,32 +1,19 @@
-package kz.orkenniet.profile.presentation;
+package kz.orkenniet.profile.presentation
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import by.kirich1409.viewbindingdelegate.viewBinding
+import kz.orkenniet.R
+import kz.orkenniet.databinding.FragmentLoginBinding
+import kz.orkenniet.databinding.FragmentProfilBinding
 
-import androidx.fragment.app.Fragment;
+class ProfilFragment : Fragment(R.layout.fragment_profil) {
+    private val binding: FragmentProfilBinding by viewBinding(FragmentProfilBinding::bind)
 
-import kz.orkenniet.R;
-
-public class ProfilFragment extends Fragment {
-
-    public ProfilFragment() {
-        // Required empty public constructor
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-
-
-        /**
-         * мен бирденке истедим
-         * */
-
-
-        View view = inflater.inflate(R.layout.fragment_profil, container, false);
-        return view;
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 }
