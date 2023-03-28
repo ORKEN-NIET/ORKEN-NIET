@@ -1,61 +1,47 @@
-package kz.orkenniet.tabbar.presentation;
+package kz.orkenniet.tabbar.presentation
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import kz.orkenniet.R
+import kz.orkenniet.databinding.ActivityMainBinding
+import kz.orkenniet.home.presentation.HomeFragment
+import kz.orkenniet.library.presentation.LibraryFragment
+import kz.orkenniet.profile.presentation.ProfileFragment
+import kz.orkenniet.quotes.presentation.QuotesFragment
 
-import android.os.Bundle;
-import android.view.MenuItem;
+class MainActivity : AppCompatActivity() {
 
-import kz.orkenniet.R;
-import kz.orkenniet.library.presentation.LibraryFragment;
-import kz.orkenniet.quotes.presentation.QuotesFragment;
-import kz.orkenniet.home.presentation.HomeFragment;
-import kz.orkenniet.profile.presentation.ProfileFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+    private lateinit var binding: ActivityMainBinding
 
-public class MainActivity extends AppCompatActivity {
-        private BottomNavigationView bottomNavigationView;
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        replaceFragment(HomeFragment())
+        navListener
+    }
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-
-            bottomNavigationView = findViewById(R.id.navigation);
-            bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-
-            // Set the home fragment as the default fragment to display
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new HomeFragment()).commit();
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragment_container, fragment)
+            commit()
         }
+    }
 
-        private BottomNavigationView.OnNavigationItemSelectedListener navListener =
-                new BottomNavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        Fragment selectedFragment = null;
-
-                        switch (item.getItemId()) {
-                            case R.id.glavnaya:
-                                selectedFragment = new HomeFragment();
-                                break;
-                            case R.id.biblioteka:
-                                selectedFragment = new LibraryFragment();
-                                break;
-                            case R.id.citaty:
-                                selectedFragment = new QuotesFragment();
-                                break;
-                            case R.id.profil:
-                                selectedFragment = new ProfileFragment();
-                                break;
-                        }
-
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                                selectedFragment).commit();
-
-                        return true;
-                    }
-                };
-
+    private val navListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        var selectedFragment: Fragment? = null
+        when (item.itemId) {
+            R.id.glavnaya -> selectedFragment = HomeFragment()
+            R.id.biblioteka -> selectedFragment = LibraryFragment()
+            R.id.citaty -> selectedFragment = QuotesFragment()
+            R.id.profil -> selectedFragment = ProfileFragment()
+        }
+        supportFragmentManager.beginTransaction().replace(
+            R.id.fragment_container, selectedFragment!!
+        ).commit()
+        true
+    }
 }
