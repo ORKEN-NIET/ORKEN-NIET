@@ -1,25 +1,18 @@
-package kz.orkenniet.admin.presentation;
+package kz.orkenniet.admin.presentation
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.Fragment
+import by.kirich1409.viewbindingdelegate.viewBinding
+import kz.orkenniet.R
+import kz.orkenniet.databinding.AdminFragmentProfilBinding
 
-import androidx.fragment.app.Fragment;
+class AdminProfileFragment : Fragment(R.layout.admin_fragment_profil) {
 
-import kz.orkenniet.R;
+    private val binding: AdminFragmentProfilBinding by viewBinding(AdminFragmentProfilBinding::bind)
 
-public class AdminProfilFragment extends Fragment {
-
-    public AdminProfilFragment() {
-        // Required empty public constructor
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.admin_fragment_profil, container, false);
-        return view;
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.editTextEmail
     }
 }
