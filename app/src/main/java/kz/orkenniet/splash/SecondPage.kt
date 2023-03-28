@@ -1,55 +1,42 @@
-package kz.orkenniet.splash;
+package kz.orkenniet.splash
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import by.kirich1409.viewbindingdelegate.viewBinding
+import kz.orkenniet.R
+import kz.orkenniet.databinding.ActivitySecondPageBinding
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
+class SecondPage : AppCompatActivity(R.layout.activity_second_page) {
 
-import kz.orkenniet.R;
-
-public class SecondPage extends AppCompatActivity {
-    String prevStarted = "yes";
-    ViewPager slidePager;
-    PagerAdapter adapter;
-    ImageView img_next;
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
+    private val binding: ActivitySecondPageBinding by viewBinding(ActivitySecondPageBinding::bind)
+    var prevStarted = "yes"
+    override fun onResume() {
+        super.onResume()
+        val sharedpreferences = getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE)
         if (!sharedpreferences.getBoolean(prevStarted, false)) {
-            SharedPreferences.Editor editor = sharedpreferences.edit();
-            editor.putBoolean(prevStarted, Boolean.TRUE);
-            editor.apply();
+            val editor = sharedpreferences.edit()
+            editor.putBoolean(prevStarted, true)
+            editor.apply()
         } else {
-            if(img_next.isEnabled()){
-                moveToSecondary();
+            if (binding.imgNext.isEnabled) {
+                moveToSecondary()
             }
         }
     }
 
     @SuppressLint("MissingInflatedId")
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second_page);
-        img_next = findViewById(R.id.img_next);
-        img_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onResume();
-            }
-        });
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_second_page)
+        binding.imgNext.setOnClickListener {
+            onResume()
+        }
     }
-    public void moveToSecondary(){
-        Intent intent = new Intent(this, ThirdPage.class);
-        startActivity(intent);
+
+    fun moveToSecondary() {
+        val intent = Intent(this, ThirdPage::class.java)
+        startActivity(intent)
     }
 }
