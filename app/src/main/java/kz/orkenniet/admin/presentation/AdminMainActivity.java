@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import kz.orkenniet.R;
-import kz.orkenniet.library.presentation.BibliotekaFragment;
+import kz.orkenniet.library.presentation.LibraryFragment;
 import kz.orkenniet.quotes.presentation.QuotesFragment;
 import kz.orkenniet.home.presentation.HomeFragment;
 import kz.orkenniet.profile.presentation.ProfileFragment;
@@ -38,7 +38,7 @@ public class AdminMainActivity extends AppCompatActivity {
                             selectedFragment = new HomeFragment();
                             break;
                         case R.id.biblioteka:
-                            selectedFragment = new BibliotekaFragment();
+                            selectedFragment = new LibraryFragment();
                             break;
                         case R.id.citaty:
                             selectedFragment = new QuotesFragment();
