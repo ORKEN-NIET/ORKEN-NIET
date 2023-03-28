@@ -25,13 +25,13 @@
             android:name=".splash.ThirdPage"
             android:exported="false" />
         <activity
-            android:name=".splash.SecondPage"
+            android:name=".splash.SecondPageActivity"
             android:exported="false" />
         <activity
             android:name=".tabbar.presentation.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".splash.FirstPage"
+            android:name=".splash.FirstPageActivity"
             android:exported="false" />
         <activity
             android:name=".splash.SplashScreenActivity"
