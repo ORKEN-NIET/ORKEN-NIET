@@ -5,16 +5,16 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import by.kirich1409.viewbindingdelegate.viewBinding
 import kz.orkenniet.R
-import kz.orkenniet.databinding.ActivitySecondPageBinding
+import kz.orkenniet.databinding.ActivityFourthPageBinding
+import kz.orkenniet.tabbar.presentation.MainActivity
 
-class SecondPageActivity : AppCompatActivity(R.layout.activity_second_page) {
+class FourthPageActivity : AppCompatActivity(R.layout.activity_fourth_page) {
 
-    private val binding: ActivitySecondPageBinding by viewBinding(ActivitySecondPageBinding::bind)
+    private val binding: ActivityFourthPageBinding by viewBinding(ActivityFourthPageBinding::bind)
     private var prevStarted = "yes"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second_page)
         binding.imgNext.setOnClickListener {
             onResume()
         }
@@ -35,7 +35,7 @@ class SecondPageActivity : AppCompatActivity(R.layout.activity_second_page) {
     }
 
     private fun moveToSecondary() {
-        val intent = Intent(this, ThirdPageActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 }
