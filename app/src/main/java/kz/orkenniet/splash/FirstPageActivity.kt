@@ -9,7 +9,7 @@ import kz.orkenniet.R
 import kz.orkenniet.databinding.ActivityFirstPageBinding
 import java.lang.Boolean
 
-class FirstPage : AppCompatActivity(R.layout.activity_first_page) {
+class FirstPageActivity : AppCompatActivity(R.layout.activity_first_page) {
 
     private val binding: ActivityFirstPageBinding by viewBinding(ActivityFirstPageBinding::bind)
     private var prevStarted = "yes"
@@ -37,7 +37,7 @@ class FirstPage : AppCompatActivity(R.layout.activity_first_page) {
     }
 
     fun moveToSecondary() {
-        val intent = Intent(this, SecondPage::class.java)
+        val intent = Intent(this, SecondPageActivity::class.java)
         startActivity(intent)
     }
 }
