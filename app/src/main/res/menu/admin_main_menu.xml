@@ -11,7 +11,7 @@
     <item
         android:id="@+id/citaty"
         android:icon="@drawable/list"
-        android:title="@string/citatalar" />
+        android:title="@string/rating" />
     <item
         android:id="@+id/profil"
         android:icon="@drawable/profil"

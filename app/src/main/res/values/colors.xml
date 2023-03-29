@@ -7,9 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="gray">#A1A1A1</color>
+    <color name="gold_color">#FFC000</color>
+    <color name="silver_color">#C0C0C0</color>
     <color name="light_gray">#CCECECEC</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#EDA730</color>
+    <color name="bronze_color">#CD7F32</color>
     <color name="blue">#223BDC</color>
     <color name="blue_light">#E7E9FF</color>
     <color name="green">#B3FF11</color>
