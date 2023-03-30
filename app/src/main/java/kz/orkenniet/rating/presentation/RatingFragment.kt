@@ -13,23 +13,26 @@ import kz.orkenniet.rating.domain.adapter.RatingAdapter
 class RatingFragment : Fragment(R.layout.fragment_rating) {
 
     private val binding: FragmentRatingBinding by viewBinding(FragmentRatingBinding::bind)
-    var ratingList = arrayListOf<RatingItem>()
-    var recyclerAdapter: RatingAdapter = RatingAdapter(ratingList)
+    lateinit var recyclerAdapter: RatingAdapter
+    var ratingList = arrayListOf<RatingItem>(
+        RatingItem(R.drawable.share, "Aleke", "1000 прочитано страниц"),
+        RatingItem(R.drawable.share, "Bake", "242 прочитано страниц"),
+        RatingItem(R.drawable.share, "Sake", "250 прочитано страниц"),
+        RatingItem(R.drawable.share, "Dake", "251 прочитано страниц"),
+        RatingItem(R.drawable.share, "Cambak", "258 прочитано страниц")
+
+    )
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         super.onCreate(savedInstanceState)
-        var ratingFirst = RatingItem(R.drawable.share, "Данияр", "1000 прочитано страниц")
-        var ratingSecond = RatingItem(R.drawable.share, "Данияр", "250 прочитано страниц")
-        var ratingThird = RatingItem(R.drawable.share, "Данияр", "250 прочитано страниц")
-        var ratingFourth = RatingItem(R.drawable.share, "Данияр", "250 прочитано страниц")
-        var ratingFifth = RatingItem(R.drawable.share, "Данияр", "250 прочитано страниц")
-        ratingList.add(ratingFirst)
-        ratingList.add(ratingSecond)
-        ratingList.add(ratingThird)
-        ratingList.add(ratingFourth)
-        ratingList.add(ratingFifth)
-        binding.recylcerView.adapter = recyclerAdapter
-        binding.recylcerView.layoutManager = LinearLayoutManager(context)
-        binding.recylcerView.setHasFixedSize(true)
+        recyclerAdapter = RatingAdapter()
+        binding.apply {
+            recylcerView.apply {
+                layoutManager = LinearLayoutManager(requireContext())
+                adapter = recyclerAdapter
+                setHasFixedSize(true)
+            }
+        }
+        recyclerAdapter.submitList(ratingList)
     }
 }
