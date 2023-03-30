@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="165dp"
-        android:orientation="vertical">
         <LinearLayout
             android:id="@+id/l_search"
             android:layout_width="match_parent"
@@ -16,6 +13,9 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/rounded_button"
             android:orientation="horizontal">
             <ImageView
@@ -34,46 +34,21 @@
                 android:textSize="17dp"
                 android:background="@android:color/transparent"/>
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/l_book"
-            android:background="@drawable/book_rounded"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:orientation="horizontal"
-            android:layout_margin="20dp">
-            <TextView
-                android:id="@+id/txt_reading"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="@color/white"
-                android:text="@string/oqyluda"
-                android:background="@drawable/rounded_button_biblioteka"
-                android:textSize="15dp"/>
-            <TextView
-                android:id="@+id/txt_want"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="@color/blue"
-                android:text="@string/qalaimyn"
-                android:textSize="15dp"/>
-            <TextView
-                android:id="@+id/txt_read"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="@color/blue"
-                android:text="@string/oqylgan"
-                android:textSize="15dp"/>
-        </LinearLayout>
-    </LinearLayout>
-    <FrameLayout
-        android:id="@+id/fragment_biblioteka_container"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </FrameLayout>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@id/l_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

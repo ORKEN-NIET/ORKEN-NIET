@@ -1,4 +1,4 @@
-package kz.orkenniet.admin.presentation
+package kz.orkenniet.tabbar.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -25,11 +25,11 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     }
 
     private val navListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        var selectedFragment = when(item.itemId){
+        var selectedFragment = when (item.itemId) {
             R.id.glavnaya -> HomeFragment()
             R.id.biblioteka -> LibraryFragment()
-            R.id.citaty ->  QuotesFragment()
-            R.id.profil ->  ProfileFragment()
+            R.id.citaty -> QuotesFragment()
+            R.id.profil -> ProfileFragment()
             else -> null
         }
         supportFragmentManager.beginTransaction().replace(
