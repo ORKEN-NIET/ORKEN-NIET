@@ -12,7 +12,7 @@ import kz.orkenniet.R
 import kz.orkenniet.rating.data.model.RatingItem
 
 class RatingAdapter :
-    ListAdapter<RatingItem, RatingAdapter.RatingItemViewHolder>(RatingItemDiffUtill()) {
+    ListAdapter<RatingItem, RatingAdapter.RatingItemViewHolder>(RatingItemDiffUtil()) {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -30,18 +30,21 @@ class RatingAdapter :
     class RatingItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindData(ratingItem: RatingItem) {
             itemView.findViewById<TextView>(R.id.txv_name_places).text = ratingItem.name
-            itemView.findViewById<TextView>(R.id.txv_pages_places).text = ratingItem.pages
+            itemView.findViewById<ImageView>(R.id.img_person_places)
+                .setImageResource(ratingItem.image)
+            itemView.findViewById<TextView>(R.id.txv_pages_places).text =
+                ratingItem.pages.toString() + " прочитано страниц"
             itemView.findViewById<ImageView>(R.id.img_medal).setImageResource(R.drawable.gold)
         }
     }
 
-    class RatingItemDiffUtill : DiffUtil.ItemCallback<RatingItem>() {
+    class RatingItemDiffUtil : DiffUtil.ItemCallback<RatingItem>() {
         override fun areItemsTheSame(oldItem: RatingItem, newItem: RatingItem): Boolean {
             return newItem.pages == oldItem.pages
         }
 
         override fun areContentsTheSame(oldItem: RatingItem, newItem: RatingItem): Boolean {
-            return areItemsTheSame(oldItem, newItem)
+            return oldItem == newItem
         }
     }
 }

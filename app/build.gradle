@@ -55,6 +55,7 @@ dependencies {
 
     implementation "io.insert-koin:koin-core:3.3.3"
     implementation "io.insert-koin:koin-android:3.3.3"
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.4'
 
     detektPlugins 'io.gitlab.arturbosch.detekt:detekt-formatting:1.22.0'
 
