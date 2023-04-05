@@ -71,7 +71,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/ganrlar"
+                            android:text="Детективы"
                             android:textSize="15dp"
                             android:textColor="@color/blue"
                             android:gravity="center"/>
@@ -86,7 +86,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/ganrlar"
+                            android:text="Приключения"
                             android:textSize="15dp"
                             android:textColor="@color/blue"
                             android:gravity="center"/>
@@ -100,7 +100,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/ganrlar"
+                            android:text="Сказки"
                             android:textSize="15dp"
                             android:textColor="@color/blue"
                             android:gravity="center"/>
@@ -137,6 +137,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/kitap"
+                            android:layout_marginLeft="15dp"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/kitap2"
+                            android:layout_marginLeft="15dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/kitap3" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/kitap4"
+                            android:layout_marginRight="15dp"/>
 
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -171,6 +193,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/kitap5"
+                            android:layout_marginLeft="15dp"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/kitap6"
+                            android:layout_marginLeft="15dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/kitap7" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/kitap8"
+                            android:layout_marginRight="15dp"/>
 
                     </LinearLayout>
                 </HorizontalScrollView>

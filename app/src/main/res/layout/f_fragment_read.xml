@@ -1,7 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pink">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="115dp"
+                android:layout_height="181dp"
+                android:src="@drawable/img_1"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/txt_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22dp"
+                android:textColor="@color/black"
+                android:text="Masters of Art:\nMalevich"
+                app:layout_constraintStart_toEndOf="@id/img"
+                android:layout_marginLeft="10dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/txt_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:text="Charlotte Douglas"
+                app:layout_constraintStart_toEndOf="@id/img"
+                app:layout_constraintTop_toBottomOf="@id/txt_1"
+                android:layout_marginLeft="10dp"
+                tools:ignore="MissingConstraints" />
+            <ImageView
+                android:id="@+id/book"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pages"
+                app:layout_constraintStart_toEndOf="@id/img"
+                app:layout_constraintBottom_toBottomOf="@id/img"
+                android:layout_marginLeft="10dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/txt_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:text="223 стр."
+                app:layout_constraintStart_toEndOf="@id/book"
+                app:layout_constraintBottom_toBottomOf="@id/img"
+                android:layout_marginLeft="5dp"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="115dp"
+                android:layout_height="181dp"
+                android:src="@drawable/kitap"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/txt_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22dp"
+                android:textColor="@color/black"
+                android:text="The Great\nGater"
+                app:layout_constraintStart_toEndOf="@id/img1"
+                android:layout_marginLeft="10dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/txt_21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:text="Charlotte Douglas"
+                app:layout_constraintStart_toEndOf="@id/img1"
+                app:layout_constraintTop_toBottomOf="@id/txt_11"
+                android:layout_marginLeft="10dp"
+                tools:ignore="MissingConstraints" />
+            <ImageView
+                android:id="@+id/book1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pages"
+                app:layout_constraintStart_toEndOf="@id/img1"
+                app:layout_constraintBottom_toBottomOf="@id/img1"
+                android:layout_marginLeft="10dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/txt_31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:text="342 стр."
+                app:layout_constraintStart_toEndOf="@id/book1"
+                app:layout_constraintBottom_toBottomOf="@id/img1"
+                android:layout_marginLeft="5dp"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/img12"
+                android:layout_width="115dp"
+                android:layout_height="181dp"
+                android:src="@drawable/kitap2"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/txt_112"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22dp"
+                android:textColor="@color/black"
+                android:text="Journey to thr\n stars"
+                app:layout_constraintStart_toEndOf="@id/img12"
+                android:layout_marginLeft="10dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/txt_212"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:text="Charlotte Douglas"
+                app:layout_constraintStart_toEndOf="@id/img12"
+                app:layout_constraintTop_toBottomOf="@id/txt_112"
+                android:layout_marginLeft="10dp"
+                tools:ignore="MissingConstraints" />
+            <ImageView
+                android:id="@+id/book12"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pages"
+                app:layout_constraintStart_toEndOf="@id/img12"
+                app:layout_constraintBottom_toBottomOf="@id/img12"
+                android:layout_marginLeft="10dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/txt_312"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:text="193 стр."
+                app:layout_constraintStart_toEndOf="@id/book12"
+                app:layout_constraintBottom_toBottomOf="@id/img12"
+                android:layout_marginLeft="5dp"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
