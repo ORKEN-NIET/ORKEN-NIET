@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
         <ScrollView
@@ -63,6 +65,7 @@
                     android:layout_marginTop="15dp"
                     android:orientation="horizontal">
                     <LinearLayout
+                        android:id="@+id/ll_detective_genre"
                         android:layout_weight="1"
                         android:layout_width="100dp"
                         android:layout_height="30dp"
@@ -77,6 +80,7 @@
                             android:gravity="center"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/ll_adventure_genre"
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:layout_weight="1"
@@ -92,6 +96,7 @@
                             android:gravity="center"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/ll_fairy_tails_genre"
                         android:layout_marginLeft="2dp"
                         android:layout_weight="1"
                         android:layout_width="100dp"
