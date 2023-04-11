@@ -16,17 +16,17 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         binding.llAdventureGenre.setOnClickListener {
             this.fragmentManager?.beginTransaction()
-                ?.replace(R.id.layout, SortedByAdventureGenreFragment())
+                ?.replace(R.id.layout, SortedBookFragment())
                 ?.commit()
         }
         binding.llDetectiveGenre.setOnClickListener {
             this.fragmentManager?.beginTransaction()
-                ?.replace(R.id.layout, SortedByDetectiveGenreFragment())
+//                ?.replace(R.id.layout, SortedByDetectiveGenreFragment())
                 ?.commit()
         }
         binding.llFairyTailsGenre.setOnClickListener {
             this.fragmentManager?.beginTransaction()
-                ?.replace(R.id.layout, SortedByTailsGenreFragment())
+//                ?.replace(R.id.layout, SortedByTailsGenreFragment())
                 ?.commit()
         }
     }
