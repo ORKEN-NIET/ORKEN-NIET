@@ -34,7 +34,7 @@ class SortedByGenreAdapter :
         fun bindData(bookItem: ListItem) {
             when (bookItem) {
                 is Book -> {
-                    itemView.findViewById<ImageView>(R.id.book_img).setImageResource(bookItem.Image)
+                    itemView.findViewById<ImageView>(R.id.book_img).setImageResource(bookItem.image)
                     itemView.findViewById<TextView>(R.id.txv_find_result).isVisible = false
                 }
                 is Count -> {
