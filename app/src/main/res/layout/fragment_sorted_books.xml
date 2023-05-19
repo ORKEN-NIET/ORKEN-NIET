@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".home.presentation.SortedBookFragment">
+
+    <LinearLayout
+        android:id="@+id/l_genre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/detectiveGenreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="Детективы"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/adventureGenreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="Приключения"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/fairyTailGenreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="Сказки"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_genre" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

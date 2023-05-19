@@ -1,14 +1,51 @@
 package kz.orkenniet.home.presentation
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 import kz.orkenniet.R
-import kz.orkenniet.home.model.Book
-import kz.orkenniet.home.model.Count
-import kz.orkenniet.home.model.ListItem
+import kz.orkenniet.core.resource.Resource
+import kz.orkenniet.home.domain.repository.HomeRepository
+import kz.orkenniet.home.domain.usecase.GetSortedBooksUseCase
+import kz.orkenniet.home.presentation.model.Book
+import kz.orkenniet.home.presentation.model.Count
+import kz.orkenniet.home.presentation.model.ListItem
 
-class SortedBookViewModel : ViewModel() {
-    @Suppress("MagicNumber")
-    fun getSortedBookList(): List<ListItem> {
+class SortedBookViewModel(
+    private val getSortedBooksUseCase: GetSortedBooksUseCase
+) : ViewModel() {
+
+    private val _sortedBookList = MutableStateFlow(emptyList<ListItem>())
+    val sortedBookList = _sortedBookList.asStateFlow()
+
+    private val _selectedGenre = MutableStateFlow("")
+    val selectedGenre = _selectedGenre.asStateFlow()
+
+    private val _error = MutableSharedFlow<String>()
+    val error = _error.asSharedFlow()
+
+    fun getSortedBooks(genre: String) {
+        _selectedGenre.value = genre
+        getSortedBooksUseCase.invoke(genre) { result ->
+            when (result) {
+                is Resource.Loading -> { /*todo*/ }
+                is Resource.Error -> {
+                    viewModelScope.launch {
+                        _error.emit(result.message.orEmpty())
+                    }
+                }
+                is Resource.Success -> {
+                    _sortedBookList.value = result.data.orEmpty()
+                }
+            }
+        }
+    }
+
+    private fun getSortedBookList(): List<ListItem> {
         return arrayListOf(
             Count(431),
             Book(R.drawable.kitap),

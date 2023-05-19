@@ -1,4 +1,4 @@
-package kz.orkenniet.home.adapter
+package kz.orkenniet.home.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import kz.orkenniet.R
 import kz.orkenniet.databinding.SortedBooksListItemBinding
-import kz.orkenniet.home.model.Book
-import kz.orkenniet.home.model.Count
-import kz.orkenniet.home.model.ListItem
+import kz.orkenniet.home.presentation.model.Book
+import kz.orkenniet.home.presentation.model.Count
+import kz.orkenniet.home.presentation.model.ListItem
 
 class SortedByGenreAdapter :
     ListAdapter<ListItem, SortedByGenreAdapter.BookViewHolder>(BookDiffUtil()) {
@@ -25,7 +25,7 @@ class SortedByGenreAdapter :
         )
     }
 
-    override fun onBindViewHolder(holder: SortedByGenreAdapter.BookViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         holder.bindData(getItem(position))
     }
 
