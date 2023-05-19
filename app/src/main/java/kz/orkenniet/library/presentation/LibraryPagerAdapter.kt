@@ -19,9 +19,9 @@ class LibraryPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             READING_FRAGMENT_POSITION -> ReadingFragment()
-            WANT_FRAGMENT_POSITION -> WantFragment()
             READ_FRAGMENT_POSITION -> ReadFragment()
-            else -> throw IllegalArgumentException("Unknown auth position")
+            WANT_FRAGMENT_POSITION -> WantFragment()
+            else -> throw IllegalArgumentException("Unknown library position")
         }
     }
 }
