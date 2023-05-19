@@ -9,7 +9,7 @@ import kz.orkenniet.databinding.ActivityAdminMainBinding
 import kz.orkenniet.home.presentation.HomeFragment
 import kz.orkenniet.library.presentation.LibraryFragment
 import kz.orkenniet.profile.presentation.ProfileFragment
-import kz.orkenniet.quotes.presentation.QuotesFragment
+import kz.orkenniet.rating.presentation.RatingFragment
 
 class AdminMainActivity : AppCompatActivity(R.layout.activity_admin_main) {
 
@@ -28,7 +28,7 @@ class AdminMainActivity : AppCompatActivity(R.layout.activity_admin_main) {
         var selectedFragment = when (item.itemId) {
             R.id.glavnaya -> HomeFragment()
             R.id.biblioteka -> LibraryFragment()
-            R.id.citaty -> QuotesFragment()
+            R.id.citaty -> RatingFragment()
             R.id.profil -> ProfileFragment()
             else -> null
         }

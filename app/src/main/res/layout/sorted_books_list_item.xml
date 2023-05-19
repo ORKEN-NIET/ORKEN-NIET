@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_card_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="8dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="10dp"
+    app:cornerRadius="50dp">
+    <TextView
+        android:id="@+id/txv_find_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sandar"
+        android:textSize="24dp"
+        android:textColor="@color/gray"
+        android:visibility="visible"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        />
+    <ImageView
+        android:id="@+id/book_img"
+        android:layout_width="180dp"
+        android:layout_height="260dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/kitap"
+        />
+</androidx.cardview.widget.CardView>

@@ -9,7 +9,7 @@ import kz.orkenniet.databinding.FragmentWantBinding
 
 class WantFragment : Fragment(R.layout.fragment_want) {
 
-    private val binding: FragmentWantBinding by viewBinding(FragmentWantBinding::bind)
+    private val binding: FragmentWantBinding by viewBinding(FFragmentWantBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

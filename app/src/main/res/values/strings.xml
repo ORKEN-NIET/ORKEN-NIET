@@ -13,7 +13,7 @@
     <string name="jana">Жаңа</string>
     <string name="basty_bet">Басты бет</string>
     <string name="kitaphana">Кітапхана</string>
-    <string name="citatalar">Цитаталар</string>
+    <string name="rating">Рейтинг</string>
     <string name="paraqsha">Парақша</string>
     <string name="baptaular">Баптаулар</string>
     <string name="komek">Көмек</string>
@@ -21,4 +21,5 @@
     <string name="normativti_bet_sany">Нормативті бет саны</string>
     <string name="electronodyq_pochts">Электрондық почта</string>
     <string name="qupiasoz">Құпиясөз</string>
+    <string name="rating_title">Рейтинг</string>
 </resources>

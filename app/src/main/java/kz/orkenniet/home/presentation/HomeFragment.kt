@@ -13,6 +13,21 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.lGenre
+
+        binding.llAdventureGenre.setOnClickListener {
+            this.fragmentManager?.beginTransaction()
+                ?.replace(R.id.layout, SortedByAdventureGenreFragment())
+                ?.commit()
+        }
+        binding.llDetectiveGenre.setOnClickListener {
+            this.fragmentManager?.beginTransaction()
+                ?.replace(R.id.layout, SortedByDetectiveGenreFragment())
+                ?.commit()
+        }
+        binding.llFairyTailsGenre.setOnClickListener {
+            this.fragmentManager?.beginTransaction()
+                ?.replace(R.id.layout, SortedByTailsGenreFragment())
+                ?.commit()
+        }
     }
 }
