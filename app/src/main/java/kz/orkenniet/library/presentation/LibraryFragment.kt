@@ -22,9 +22,9 @@ class LibraryFragment : Fragment(R.layout.fragment_library) {
         viewPager.adapter = LibraryPagerAdapter(this@LibraryFragment)
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             when (position) {
-                LibraryPagerAdapter.READ_FRAGMENT_POSITION -> tab.text = "Read"
-                LibraryPagerAdapter.READING_FRAGMENT_POSITION -> tab.text = "Reading"
-                LibraryPagerAdapter.WANT_FRAGMENT_POSITION -> tab.text = "Want"
+                LibraryPagerAdapter.READ_FRAGMENT_POSITION -> tab.text = "Reading"
+                LibraryPagerAdapter.READING_FRAGMENT_POSITION -> tab.text = "Want"
+                LibraryPagerAdapter.WANT_FRAGMENT_POSITION -> tab.text = "Read"
             }
         }.attach()
     }
