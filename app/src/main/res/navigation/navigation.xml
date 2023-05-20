@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottomNavigationView"
     app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="kz.orkenniet.home.presentation.HomeFragment">
+        android:name="kz.orkenniet.home.presentation.HomeFragment"
+        tools:layout="@layout/fragment_home">
 
         <action
             android:id="@+id/action_homeFragment_to_sortedBookFragment"
@@ -15,19 +17,23 @@
 
     <fragment
         android:id="@+id/libraryFragment"
-        android:name="kz.orkenniet.library.presentation.LibraryFragment" />
+        android:name="kz.orkenniet.library.presentation.LibraryFragment"
+        tools:layout="@layout/fragment_library" />
 
     <fragment
         android:id="@+id/ratingFragment"
-        android:name="kz.orkenniet.rating.presentation.RatingFragment" />
+        android:name="kz.orkenniet.rating.presentation.RatingFragment"
+        tools:layout="@layout/fragment_rating" />
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="kz.orkenniet.profile.presentation.ProfileFragment" />
+        android:name="kz.orkenniet.profile.presentation.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/sortedBookFragment"
-        android:name="kz.orkenniet.home.presentation.SortedBookFragment">
+        android:name="kz.orkenniet.home.presentation.SortedBookFragment"
+        tools:layout="@layout/fragment_sorted_books">
 
         <argument
             android:name="genre"
