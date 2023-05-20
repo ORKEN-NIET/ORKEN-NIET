@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
 import kz.orkenniet.R
+import kz.orkenniet.core.extentions.navigate
 import kz.orkenniet.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -13,21 +14,24 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupNavigation()
+    }
 
-        binding.llAdventureGenre.setOnClickListener {
-            this.fragmentManager?.beginTransaction()
-                ?.replace(R.id.layout, SortedBookFragment())
-                ?.commit()
+    private fun setupNavigation() = with(binding) {
+        llAdventureGenre.setOnClickListener {
+            navigateToSortedBook("приключения")
         }
-        binding.llDetectiveGenre.setOnClickListener {
-            this.fragmentManager?.beginTransaction()
-//                ?.replace(R.id.layout, SortedByDetectiveGenreFragment())
-                ?.commit()
+        llDetectiveGenre.setOnClickListener {
+            navigateToSortedBook("детектив")
         }
-        binding.llFairyTailsGenre.setOnClickListener {
-            this.fragmentManager?.beginTransaction()
-//                ?.replace(R.id.layout, SortedByTailsGenreFragment())
-                ?.commit()
+        llFairyTailsGenre.setOnClickListener {
+            navigateToSortedBook("сказки")
         }
+    }
+
+    private fun navigateToSortedBook(genre: String) {
+        navigate(
+            HomeFragmentDirections.actionHomeFragmentToSortedBookFragment(genre)
+        )
     }
 }

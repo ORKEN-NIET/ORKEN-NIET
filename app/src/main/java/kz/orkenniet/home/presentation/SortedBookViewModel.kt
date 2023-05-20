@@ -16,20 +16,25 @@ import kz.orkenniet.home.presentation.model.Count
 import kz.orkenniet.home.presentation.model.ListItem
 
 class SortedBookViewModel(
+    genre: String,
     private val getSortedBooksUseCase: GetSortedBooksUseCase
 ) : ViewModel() {
 
-    private val _sortedBookList = MutableStateFlow(emptyList<ListItem>())
+    private val _sortedBookList = MutableStateFlow(getSortedBookList())
     val sortedBookList = _sortedBookList.asStateFlow()
 
-    private val _selectedGenre = MutableStateFlow("")
+    private val _selectedGenre = MutableStateFlow(genre)
     val selectedGenre = _selectedGenre.asStateFlow()
 
     private val _error = MutableSharedFlow<String>()
     val error = _error.asSharedFlow()
 
+    private val _loading = MutableStateFlow(false)
+    val loading = _loading.asStateFlow()
+
     fun getSortedBooks(genre: String) {
         _selectedGenre.value = genre
+        _loading.value = true
         getSortedBooksUseCase.invoke(genre) { result ->
             when (result) {
                 is Resource.Loading -> { /*todo*/ }
@@ -39,12 +44,14 @@ class SortedBookViewModel(
                     }
                 }
                 is Resource.Success -> {
-                    _sortedBookList.value = result.data.orEmpty()
+//                    _sortedBookList.value = result.data.orEmpty()
                 }
             }
+            _loading.value = false
         }
     }
 
+    // todo remove mock data
     private fun getSortedBookList(): List<ListItem> {
         return arrayListOf(
             Count(431),

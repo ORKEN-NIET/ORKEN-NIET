@@ -19,6 +19,7 @@ val homeModule = module {
 
     viewModel {
         SortedBookViewModel(
+            genre = get(),
             getSortedBooksUseCase = get(),
         )
     }

@@ -2,14 +2,12 @@ package kz.orkenniet.tabbar.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import kz.orkenniet.R
 import kz.orkenniet.databinding.ActivityMainBinding
-import kz.orkenniet.home.presentation.HomeFragment
-import kz.orkenniet.library.presentation.LibraryFragment
-import kz.orkenniet.profile.presentation.ProfileFragment
-import kz.orkenniet.rating.presentation.RatingFragment
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
@@ -17,25 +15,20 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.navigation.setOnNavigationItemSelectedListener(navListener)
-        supportFragmentManager.beginTransaction().replace(
-            R.id.fragment_container,
-            HomeFragment()
-        ).commit()
+        setupBottomNavigation()
     }
 
-    private val navListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        var selectedFragment = when (item.itemId) {
-            R.id.glavnaya -> HomeFragment()
-            R.id.biblioteka -> LibraryFragment()
-            R.id.citaty -> RatingFragment()
-            R.id.profil -> ProfileFragment()
-            else -> null
+    private fun setupBottomNavigation() {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        binding.bottomNavigationView.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.sortedBookFragment -> binding.bottomNavigationView.isVisible = false
+                else -> binding.bottomNavigationView.isVisible = true
+            }
         }
-        supportFragmentManager.beginTransaction().replace(
-            R.id.fragment_container,
-            selectedFragment!!
-        ).commit()
-        true
     }
 }

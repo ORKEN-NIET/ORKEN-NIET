@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomNavigationView"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="kz.orkenniet.home.presentation.HomeFragment">
+
+        <action
+            android:id="@+id/action_homeFragment_to_sortedBookFragment"
+            app:destination="@id/sortedBookFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="kz.orkenniet.library.presentation.LibraryFragment" />
+
+    <fragment
+        android:id="@+id/ratingFragment"
+        android:name="kz.orkenniet.rating.presentation.RatingFragment" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="kz.orkenniet.profile.presentation.ProfileFragment" />
+
+    <fragment
+        android:id="@+id/sortedBookFragment"
+        android:name="kz.orkenniet.home.presentation.SortedBookFragment">
+
+        <argument
+            android:name="genre"
+            app:argType="string" />
+    </fragment>
+</navigation>
