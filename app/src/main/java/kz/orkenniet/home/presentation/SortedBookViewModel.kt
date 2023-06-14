@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kz.orkenniet.R
 import kz.orkenniet.core.resource.Resource
+import kz.orkenniet.home.domain.repository.HomeRepository
 import kz.orkenniet.home.domain.usecase.GetSortedBooksUseCase
 import kz.orkenniet.home.presentation.model.Book
 import kz.orkenniet.home.presentation.model.Count
@@ -39,13 +40,11 @@ class SortedBookViewModel(
                 is Resource.Loading -> {
 
                 }
-
                 is Resource.Error -> {
                     viewModelScope.launch {
                         _error.emit(result.message.orEmpty())
                     }
                 }
-
                 is Resource.Success -> {
                     _sortedBookList.value = result.data.orEmpty()
                 }
