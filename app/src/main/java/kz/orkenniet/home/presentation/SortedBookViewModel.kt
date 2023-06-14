@@ -37,14 +37,16 @@ class SortedBookViewModel(
         _loading.value = true
         getSortedBooksUseCase.invoke(genre) { result ->
             when (result) {
-                is Resource.Loading -> { /*todo*/ }
+                is Resource.Loading -> {
+
+                }
                 is Resource.Error -> {
                     viewModelScope.launch {
                         _error.emit(result.message.orEmpty())
                     }
                 }
                 is Resource.Success -> {
-//                    _sortedBookList.value = result.data.orEmpty()
+                    _sortedBookList.value = result.data.orEmpty()
                 }
             }
             _loading.value = false
@@ -66,3 +68,4 @@ class SortedBookViewModel(
         )
     }
 }
+

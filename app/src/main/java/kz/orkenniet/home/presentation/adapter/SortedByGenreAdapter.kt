@@ -6,12 +6,15 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import kz.orkenniet.R
 import kz.orkenniet.databinding.SortedBooksListItemBinding
 import kz.orkenniet.home.presentation.model.Book
 import kz.orkenniet.home.presentation.model.Count
 import kz.orkenniet.home.presentation.model.ListItem
 
-class SortedByGenreAdapter :
+class SortedByGenreAdapter(
+    val onBookClicked: (ListItem) -> Unit
+) :
     ListAdapter<ListItem, SortedByGenreAdapter.BookViewHolder>(BookDiffUtil()) {
 
     override fun onCreateViewHolder(
@@ -25,14 +28,19 @@ class SortedByGenreAdapter :
         holder.bindData(getItem(position))
     }
 
-    class BookViewHolder(
+    inner class BookViewHolder(
         private val binding: SortedBooksListItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bindData(bookItem: ListItem) = with(binding) {
             when (bookItem) {
                 is Book -> {
-                    bookImg.setImageResource(bookItem.Image)
+                    bookImg.setOnClickListener {
+                        onBookClicked(bookItem)
+                    }
+                    bookImg.setImageResource(
+                        R.drawable.book
+                    )
                     txvFindResult.isVisible = false
                 }
 
@@ -54,3 +62,4 @@ class SortedByGenreAdapter :
         }
     }
 }
+
