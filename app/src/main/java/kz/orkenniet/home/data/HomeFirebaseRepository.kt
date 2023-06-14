@@ -6,6 +6,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.getValue
+import kotlinx.coroutines.tasks.await
 import kz.orkenniet.core.resource.Resource
 import kz.orkenniet.home.domain.repository.HomeRepository
 import kz.orkenniet.home.presentation.model.Book

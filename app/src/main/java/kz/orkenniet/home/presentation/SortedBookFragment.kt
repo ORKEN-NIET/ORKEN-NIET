@@ -23,7 +23,10 @@ class SortedBookFragment : Fragment(R.layout.fragment_sorted_books) {
         parametersOf(args.genre)
     }
     private val binding: FragmentSortedBooksBinding by viewBinding(FragmentSortedBooksBinding::bind)
-    private val recyclerAdapter = SortedByGenreAdapter()
+    private val recyclerAdapter = SortedByGenreAdapter { book ->
+        print("$book")
+    }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -85,3 +88,4 @@ class SortedBookFragment : Fragment(R.layout.fragment_sorted_books) {
         }
     }
 }
+

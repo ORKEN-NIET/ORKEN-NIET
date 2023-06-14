@@ -12,3 +12,4 @@ class GetSortedBooksUseCase(
         return homeRepository.getSortedBook(genre, result)
     }
 }
+

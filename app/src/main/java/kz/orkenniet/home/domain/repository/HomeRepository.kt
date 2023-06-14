@@ -7,3 +7,4 @@ interface HomeRepository {
 
     fun getSortedBook(genre: String, result: (Resource<List<ListItem>>) -> Unit)
 }
+
